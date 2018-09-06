@@ -1,0 +1,76 @@
+html, body {
+    margin: 0;
+    overflow-x: hidden;
+    color: #fff;
+    font-family: sans-serif;
+}
+
+h1, h2 {
+    margin: 0;
+}
+
+h1, div, article {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    background-color: #ebd54e;
+    grid-area: logo;
+}
+
+.slider {
+    background-color: #a5a6a7;
+    grid-area: slider;
+}
+
+.fil-d-ariane {
+    background-color: #e0dfda;
+    color: #a5a6a7;
+    grid-area: ariane;
+}
+
+.bloc-1{
+    background-color: #72c1de;
+    grid-area: bloc1;
+}
+
+.bloc-2 {
+    background-color: #5acbf5;
+    grid-area: bloc2;
+}
+
+.footer {
+    background-color: #7cc46d;
+    grid-area: footer;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 180px 40px 150px 150px 50px;
+    grid-template-areas:
+        "logo"
+        "slider"
+        "ariane"
+        "bloc1"
+        "bloc2"
+        "footer"
+        ;
+}
+
+@media screen and (min-width : 768px) {
+    .wrapper {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-areas:
+            "logo logo ariane ariane ariane ariane"
+            "slider slider slider slider slider slider"
+            "bloc1 bloc1 bloc1 bloc2 bloc2 bloc2"
+            "bloc1 bloc1 bloc1 bloc2 bloc2 bloc2"
+            "bloc1 bloc1 bloc1 bloc2 bloc2 bloc2"
+            "footer footer footer footer footer footer"
+            ;
+    }
+}
